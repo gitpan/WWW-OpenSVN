@@ -1,8 +1,12 @@
+Build.PL
 Changes
+examples/opensvn-backup.pl
+lib/WWW/OpenSVN.pm
+Makefile.PL
 MANIFEST
 META.yml # Will be created by "make dist"
-Makefile.PL
 README
-lib/WWW/OpenSVN.pm
 t/00-load.t
+TODO
+t/pod-coverage.t
 t/pod.t
