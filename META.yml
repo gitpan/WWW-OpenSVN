@@ -1,28 +1,33 @@
 ---
-name: WWW-OpenSVN
-version: 0.1.3
+abstract: 'An automated interface for OpenSVN.csie.org.'
 author:
   - 'Shlomi Fish <shlomif@iglu.org.il>'
-abstract: An automated interface for OpenSVN.csie.org.
-license: mit
-resources:
-  Repository: http://svn.berlios.de/svnroot/repos/web-cpan/www-opensvn/
-  homepage: http://web-cpan.berlios.de/modules/WWW-OpenSVN/
-  license: http://en.wikipedia.org/wiki/MIT_License
-requires:
-  LWP::UserAgent: 0
-  perl: 5.006
 build_requires:
   Test::More: 0
+configure_requires:
+  Module::Build: 0.40
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.132140'
+license: mit
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: WWW-OpenSVN
 provides:
   WWW::OpenSVN:
     file: lib/WWW/OpenSVN.pm
-    version: 0.1.3
+    version: v0.1.4
   WWW::OpenSVN::Base:
     file: lib/WWW/OpenSVN.pm
   WWW::OpenSVN::Error:
     file: lib/WWW/OpenSVN.pm
-generated_by: Module::Build version 0.2808
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+requires:
+  LWP::UserAgent: 0
+  perl: 5.006
+  strict: 0
+  warnings: 0
+resources:
+  homepage: http://web-cpan.berlios.de/modules/WWW-OpenSVN/
+  license: http://en.wikipedia.org/wiki/MIT_License
+  repository: https://bitbucket.org/shlomif/perl-www-opensvn
+version: v0.1.4

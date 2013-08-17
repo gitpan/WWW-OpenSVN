@@ -7,10 +7,12 @@ my $builder = Module::Build->new(
     module_name         => 'WWW::OpenSVN',
     license             => 'mit',
     dist_author         => 'Shlomi Fish <shlomif@iglu.org.il>',
-    requires => 
+    requires =>
     {
+        'strict' => 0,
         'LWP::UserAgent' => 0,
         'perl' => "5.006",
+        'warnings' => 0,
     },
     build_requires =>
     {
@@ -22,7 +24,7 @@ my $builder = Module::Build->new(
         resources => {
             homepage => "http://web-cpan.berlios.de/modules/WWW-OpenSVN/",
             license => "http://en.wikipedia.org/wiki/MIT_License",
-            Repository => "http://svn.berlios.de/svnroot/repos/web-cpan/www-opensvn/",
+            repository => "https://bitbucket.org/shlomif/perl-www-opensvn",
         },
     },
 );

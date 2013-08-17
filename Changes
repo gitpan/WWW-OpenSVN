@@ -1,5 +1,9 @@
 Revision history for WWW-OpenSVN
 
+0.1.4   2013-08-17
+    - Fix https://rt.cpan.org/Ticket/Display.html?id=87904
+        - Case problem with metadata.
+
 0.1.3   2008-09-14
     - Converted to Build.PL (Kwalitee).
     - Added full POD coverage (Kwalitee) with a test by t/pod-coverage.t.

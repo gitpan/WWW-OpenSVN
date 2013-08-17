@@ -15,13 +15,13 @@ WWW::OpenSVN - An automated interface for OpenSVN.csie.org.
 
 use vars qw($VERSION);
 
-$VERSION = '0.1.3';
+$VERSION = '0.1.4';
 
 =head1 SYNOPSIS
 
-    my $opensvn = 
+    my $opensvn =
         WWW::OpenSVN->new(
-            'project' => "myproject", 
+            'project' => "myproject",
             'password' => "MySecretPassphrase",
         );
 
@@ -141,8 +141,8 @@ sub _get_repos_revision
 
 =head2 $opensvn->fetch_dump('filename' => "myfile.dump.gz")
 
-Fetches a subversion repository dump and stores it in a file. Accepts an 
-optional argument - 'filename' that is used to specify the filename to store 
+Fetches a subversion repository dump and stores it in a file. Accepts an
+optional argument - 'filename' that is used to specify the filename to store
 the dump into. If not specified, it defaults to "$project.dump.gz"
 
 =cut
@@ -194,7 +194,7 @@ sub fetch_dump
     }
 
     my $server_return = $response->content();
-    
+
     my $fetch_file_path;
     if ($server_return =~ m{<meta http-equiv="refresh" content="0;url=/([^"]+)"})
     {
@@ -209,8 +209,8 @@ sub fetch_dump
 
     $response =
         $ua->get(
-            "$url$fetch_file_path", 
-            ":content_file" => 
+            "$url$fetch_file_path",
+            ":content_file" =>
                 ($args{'filename'} || ($self->project() . ".dump.gz")),
         );
 
@@ -224,7 +224,7 @@ sub fetch_dump
     return 0;
 }
 
-1; 
+1;
 
 __END__
 =head1 AUTHOR
